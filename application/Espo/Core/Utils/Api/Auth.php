@@ -187,6 +187,7 @@ class Auth extends \Slim\Middleware
     protected function processUnauthorized()
     {
         $response = $this->app->response();
+        $response->header('Access-Control-Allow-Origin', '*');
         if ($this->showDialog) {
             $response->headers->set('WWW-Authenticate', 'Basic realm=""');
         }
