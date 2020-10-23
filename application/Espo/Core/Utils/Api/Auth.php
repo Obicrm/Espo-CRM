@@ -4,7 +4,7 @@
  *
  * EspoCRM - Open Source CRM application.
  * Copyright (C) 2014-2019 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
- * Website: https://www.heyteknoloji.com
+ * Website: https://www.espocrm.com
  *
  * EspoCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -187,7 +187,6 @@ class Auth extends \Slim\Middleware
     protected function processUnauthorized()
     {
         $response = $this->app->response();
-        $response->headers('Access-Control-Allow-Origin', '*');
         if ($this->showDialog) {
             $response->headers->set('WWW-Authenticate', 'Basic realm=""');
         }
