@@ -309,6 +309,7 @@ class Application
             $res->header('Expires', '0');
             $res->header('Last-Modified', gmdate("D, d M Y H:i:s") . " GMT");
             $res->header('Cache-Control', 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
+            $res->header('Access-Control-Allow-Origin', '*');
             $res->header('Pragma', 'no-cache');
         });
     }
